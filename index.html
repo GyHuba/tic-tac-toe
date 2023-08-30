@@ -4,14 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Black+Ops+One&family=Caprasimo&family=Preahvihear&family=Press+Start+2P&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+      </style>
     <link rel="stylesheet" href="style.css">
     <title>Tic Tac Toe</title>
 </head>
 
 <body>
-    <div id="gameboard"></div>
-    <div id="game-text"></div>
-    <button class="restart">RESTART</button>
+    <div class="start-screen active">
+        <form action="submit">
+            <div class="forms">
+                <div class="left-player">
+                    <label for="player-one"></label>
+                    <input type="text" id="player-one" name="player-one">
+                </div>
+                <div class="vs">VS</div>
+                <div class="right-player">
+                    <label for="player-two"></label>
+                    <input type="text" id="player-two" name="player-two">
+                </div>
+            </div>
+            <button type="button" class="start-btn">START</button>
+        </form>
+    </div>
+    <div id="gameboard" class="none"></div>
+    <div id="game-text" class="">circle's turn!</div>
+    <button class="restart-btn ">RESTART</button>
 
     <script src="script.js"></script>
 </body>
