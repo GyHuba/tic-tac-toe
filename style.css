@@ -10,6 +10,9 @@ body {
     flex-direction: column;
     width: 100vw;
     height: 100vh;
+    background-color:#2B7C85;
+    font-family: 'Press Start 2P', cursive;
+    gap: 2rem;
 }
 
 #gameboard {
@@ -17,14 +20,14 @@ body {
     height: 300px;
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid black;
+    box-shadow: 1px 0px 12px 8px rgba(0,0,0,0.3);
 }
 
 .square {
     box-sizing: border-box;
     width: 100px;
     height: 100px;
-    border: 1px solid black;
+    border: 1px solid rgba(0,0,0,0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,7 +41,7 @@ body {
 .circle {
     box-sizing: border-box;
     border-radius: 50%;
-    border: 15px solid blue;
+    border: 15px solid #175873;
 }
 
 .cross {
@@ -48,7 +51,7 @@ body {
 .cross:after {
     content: '';
     height: 60px;
-    border-left: 15px solid red;
+    border-left: 15px solid #0C1446;
     position: absolute;
     transform: rotate(45deg);
     left: 22px;
@@ -57,16 +60,61 @@ body {
 .cross:before {
     content: '';
     height: 60px;
-    border-left: 15px solid red;
+    border-left: 15px solid #0C1446;
     position: absolute;
     transform: rotate(-45deg);
     left: 22px;
 }
 
-.restart{
-    display: none;
+.forms{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
-.restart.active{
+input{
+    outline: none;
+    text-align: center;
+    background-color:#87ACA3;
+    border: none;
+    font-size: 2rem;
+    border-radius: 10px;
+    font-family: 'Press Start 2P', cursive;
+    padding: 0.5rem 0;
+}
+
+button{
+    font-family: 'Press Start 2P', cursive;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 20px;
+}
+
+form{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#game-text{
+    font-size: 1rem;
+}
+
+.vs{ 
+    font-size: 3rem;
+}
+
+.start-screen.active,
+.restart-btn.active,
+#game-text.active{
     display: block;
+}
+
+.start-screen,
+.restart-btn,
+#gameboard.none,
+#game-text{
+    display: none;
 }
